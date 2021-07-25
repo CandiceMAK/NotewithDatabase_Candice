@@ -1,0 +1,40 @@
+<div class="newNote row">
+    <div class="col-lg-6">
+        <h1>Welcome back, {{user}}</h1>
+        <h4>Add a note</h4>
+        <form id="add" class="row">
+            <div class="text col col-9">
+                <textarea type="text" name="note">Write Somethings</textarea>
+            </div>
+            <div class="col col-3">
+                <input type="submit" value="Save">
+            </div>
+        </form>
+        <br><br>
+    </div>
+
+    <div class="noteContainer col-lg-6">
+        <h4 >Notes</h4>
+        <div id="notes">
+            {{#each notes}}
+            <div class="note">
+                <span class="input"><textarea data-id="{{id}}">{{content}}</textarea></span>
+
+                <span class="close"><button class="remove" data-id="{{id}}"><i class="fa fa-times"
+                        aria-hidden="true"></i></button>
+                </span>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div>
+            <br><br>
+            User Manual<br>
+            Create Note<br>
+            Click "Save" to add new note to storage.<br>
+            Click <i class="fas fa-times"></i> to delete saved note.<br>
+            </div>
+        </div>
+</div>
